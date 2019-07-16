@@ -29,7 +29,6 @@ $(function () {
     }
   })
   $('body').keypress(function(e){
-    console.log(e)
     if (e.altKey && e.which == 339) {
       $('#translateExtension').toggle()
     }

@@ -6,7 +6,6 @@ var from = 'en';
 var to = 'zh';
 
 chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log("Request comes from content script " + sender.tab.url);
   translateText(request, sendResponse);
   //由于需要异步调用sendResponse，所以需要加上return true，通知sendResponse函数等待调用
   return true;
