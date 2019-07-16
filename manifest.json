@@ -4,29 +4,32 @@
     "manifest_version": 2,
     "description": "翻译选中英文字段",
     "icons": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
     },
     "browser_action": {
         "default_title": "日报工具",
-        "default_icon": "icon.png",
+        "default_icon": "images/icon.png",
         "default_popup": "popup.html"
     },
     "options_page": "popup.html",
     "background": {
-        "scripts": ["script.js", "jquery.js"]
+        "scripts": ["scripts/jquery.js", "scripts/md5.js", "scripts/popup.js"]
     },
+    "converted_from_user_script": true,
     "content_scripts": [
 		{
-		  "matches": ["http://ops.yunshanmeicai.com/*"],
-      "js" : ["jquery.js", "contentscript.js"],
-      "run_at": "document_start",
-      "all_frames": true
-    }
+            "matches": ["http://*/*", "https://*/*"],
+            "css": ["styles/translate.css"],
+            "js" : ["scripts/jquery.js", "scripts/content.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
   ],
   "permissions": [
-    "http://*/*","https://*/*",
+    "http://*/*",
+    "https://*/*",
     "tabs",
     "cookies",
     "notifications",
