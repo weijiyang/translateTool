@@ -1,23 +1,18 @@
 #translateExtension {
     position: fixed;
     z-index: 99999;
-    width: 100px;
-    height: 100px;
+    width: 200px;
     right: 20px;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     background: #fff;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     font-size: 12px;
     color: #606266;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 100px;
-    text-align:center;
-}
-#translateExtension span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    max-height: 500px;
+    overflow:auto;
 }

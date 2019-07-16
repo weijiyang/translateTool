@@ -30,8 +30,8 @@ function translateText(request, sendResponse) {
       },
       success: function (data) {
         if (data.trans_result) {
-          let arr = data.trans_result.map(item => {
-              return item.dst
+          let arr = data.trans_result.map((item,index) => {
+              return (index+1) + '、' + item.dst
           })
           sendResponse(arr)
         } else {

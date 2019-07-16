@@ -18,11 +18,20 @@ $(function () {
   $('body').mouseup(function () {
     let str = getSelectedText()
     if (str) {
-      // translateText(str)
       chrome.extension.sendMessage({uri:"translate_id", query: str}, function(response) {
-        console.log('translate 请求成功！', response)
-        if (response.length) $('#translateExtension span').html(response.join('、'))
+        if (response.length) {
+          let str = response.join('<br/>')
+          if (response.length) $('#translateExtension').html(str)
+        } else {
+          $('#translateExtension').html('没有查到翻译哦')
+        }
       });
+    }
+  })
+  $('body').keypress(function(e){
+    console.log(e)
+    if (e.altKey && e.which == 339) {
+      $('#translateExtension').toggle()
     }
   })
 })
