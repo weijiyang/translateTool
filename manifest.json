@@ -1,6 +1,6 @@
 {
     "name": "翻译工具",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "manifest_version": 2,
     "description": "翻译选中英文字段",
     "icons": {
