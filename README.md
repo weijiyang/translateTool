@@ -1,6 +1,9 @@
 # translateTool
 基于Chrome浏览器的翻译插件
 
+## HOW TO USE
+目录中的crx文件拖拽 至Chrome扩展程序安装即可
+
 ## TODOLIST
 
 - [x] 调用翻译接口
