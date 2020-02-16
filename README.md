@@ -15,3 +15,8 @@
 - [ ] 支持自动输入 翻译api/key
 - [ ] 翻译显示定位在选中位置附近
 - [ ] 语言选择(默认 英文->中文)
+
+## DETAILS
+![image1](images/1.png)
+![image2](images/2.png)
+![image3](images/3.png)
